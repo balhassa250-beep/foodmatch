@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Healthy Meal Picker</title>
+<meta name="description" content="Pick a healthy meal idea randomly.">
+<style>
+body{font-family:Arial;text-align:center;background:#111;color:#fff;padding:40px}
+button{padding:15px 30px;font-size:20px;border:0;border-radius:10px;background:#2ecc71;color:#fff}
+a{color:#aaa;display:block;margin-top:20px}
+</style>
+</head>
+<body>
+
+<h1>🥗 Healthy Meal Picker</h1>
+<p>Need a healthy meal idea?</p>
+
+<button onclick="pick()">Pick Healthy Meal</button>
+
+<h2 id="result"></h2>
+
+<script>
+const foods=[
+"Grilled Chicken Salad",
+"Quinoa Bowl",
+"Avocado Toast",
+"Grilled Salmon",
+"Veggie Stir Fry",
+"Greek Yogurt Bowl",
+"Chicken & Brown Rice",
+"Vegetable Soup",
+"Tofu Stir Fry",
+"Fruit Smoothie Bowl"
+];
+
+function pick(){
+const random=foods[Math.floor(Math.random()*foods.length)];
+document.getElementById("result").innerText=random;
+}
+</script>
+
+<a href="/">← Back to FoodMatch</a>
+
+</body>
+</html>
