@@ -1,0 +1,11 @@
+function share(){
+  if (navigator.share){
+    navigator.share({
+      title: "FoodMatch",
+      text: "I just used FoodMatch to decide what to eat!",
+      url: window.location.href
+    });
+  } else {
+    alert("Copy this link and send it to your friends: " + window.location.href);
+  }
+}
