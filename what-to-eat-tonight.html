@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>What Should I Eat Tonight?</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Random dinner generator to help you decide what to eat tonight.">
+<style>
+body{font-family:Arial;text-align:center;background:#111;color:#fff;padding:40px}
+button{padding:15px 30px;font-size:20px;border:0;border-radius:10px;background:#ff6b00;color:#fff}
+</style>
+</head>
+
+<body>
+
+<h1>What Should I Eat Tonight?</h1>
+<p>Can't decide? Let FoodMatch pick dinner for you.</p>
+
+<button onclick="pick()">Pick Dinner</button>
+
+<h2 id="result"></h2>
+
+<script>
+const foods=[
+"Pizza","Burger","Sushi","Shawarma","Pasta",
+"Tacos","Steak","Salad","Ramen","Fried Chicken"
+]
+
+function pick(){
+const random=foods[Math.floor(Math.random()*foods.length)]
+document.getElementById("result").innerText=random
+}
+</script>
+
+</body>
+</html>
